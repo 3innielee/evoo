@@ -45,6 +45,10 @@ border-radius: 10px;
 background: red;
 cursor: pointer;
 border-radius: 10px;
+body {
+    font-family: 'Raleway', sans-serif;
+
+}
 
 #definition-source {
     text-align: right;
