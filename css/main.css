@@ -11,7 +11,44 @@ body {
 }
 
 #knowledge {
-    height: 700px;
+    height: 50%;
+}
+
+#bottle {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
+}
+
+#color {
+    position: absolute;
+    top: 30%;
+    left: 16%;
+}
+
+#evoo {
+    position: absolute;
+    top: 72%;
+    left: 11%;
+}
+
+#size {
+    position: absolute;
+    top: 81%;
+    left: 17%;
+}
+
+#seal {
+    position: absolute;
+    right: 18%;
+    top: 55%;
+}
+
+#harvest {
+    position: absolute;
+    right: 20%;
+    top: 78%;
 }
 
 .card-title {
@@ -59,3 +96,105 @@ color: white;
 cursor: pointer;
 border-radius: 10px;
 }
+
+.popover-header {
+    color: white;
+    background: #394f49;
+    font-size: 15px;
+}
+.popover-body {
+    color: black;
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 1199px) {
+    #color {
+        position: absolute;
+        top: 30%;
+        left: 10%;
+    }
+    #evoo {
+        position: absolute;
+        top: 72%;
+        left: 3%;
+    }
+
+    #size {
+        position: absolute;
+        top: 81%;
+        left: 11%;
+    }
+    
+    #seal {
+        position: absolute;
+        right: 12%;
+        top: 55%;
+    }
+    
+    #harvest {
+        position: absolute;
+        right: 12%;
+        top: 78%;
+    }    
+  }
+
+  @media only screen and (max-width: 990px) {
+    #color {
+        position: absolute;
+        top: 30%;
+        left: 8%;
+    }
+    #evoo {
+        position: absolute;
+        top: 72%;
+        left: -1%;
+    }
+
+    #size {
+        position: absolute;
+        top: 81%;
+        left: 6%;
+    }
+    
+    #seal {
+        position: absolute;
+        right: 8%;
+        top: 55%;
+    }
+    
+    #harvest {
+        position: absolute;
+        right: 12%;
+        top: 78%;
+    } 
+  }
+
+  @media only screen and (max-width: 770px) {
+    /* #color {
+        display: inline-block;
+        top: 100%;
+    }
+    #evoo {
+        display: inline-block;
+        top: 100%;
+    }
+
+    #size {
+        display: inline-block;
+        top: 100%;
+    }
+    
+    #seal {
+        display: inline-block;
+        top: 100%;
+    }
+    
+    #harvest {
+        display: inline-block;
+        top: 100%;
+    }  */
+
+    .wrapper {
+        display: none;
+    }
+  }
