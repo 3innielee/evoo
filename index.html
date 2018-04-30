@@ -23,7 +23,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/freelancer.min.css" rel="stylesheet">
-
+    <link href="css/main.css" rel="stylesheet" type="text/css">
   </head>
 
   <body id="page-top">
@@ -63,44 +63,62 @@
       </div>
     </header>
 
-    <!-- Portfolio Grid Section -->
-    <section class="portfolio" id="portfolio">
+    <!-- Test Your Knowledge -->
+    <section id="knowledge">
       <div class="container">
         <h2 class="text-center text-uppercase text-secondary mb-0">Test Your Knowledge</h2>
-        <hr class="star-dark mb-5">
+        <br>
         <div class="row d-flex justify-content-center">
           <div class = "card-deck">
-            <div class="col-lg-4">
-              <div class="card" style="width: 18rem">
-                  <img class="card-img-top" src="img/grades.png" alt="Card image cap">
-                  <div class="card-body">
-                    <h6 class="card-title">TRUE OR FALSE</h6>
-                    <p class="card-text">Pure olive oil means the oil is of the highest quality.</p>
-                    <a href="#" class="btn btn-primary">See Answer</a>
+            <div class = "card-flip">
+              <div class="card border border-white" style="width: 18rem; height: 24rem;">
+                  <div class = "face front">
+                    <img class="card-img-top" src="img/grades.png" alt="Card image cap">
+                    <div class="card-body ">
+                      <p class="card-title">TRUE OR FALSE</p>
+                      <h5 class="card-text">Pure olive oil means the oil is of the highest quality.</h5>
+                      <br>
+                      <footer class="click">CLICK TO SEE ANSWER</footer>
+                    </div>
+                  </div>
+                  <div class="face back">
+                    <p>answer</p>
                   </div>
               </div>
             </div>
-            <div class="col-lg-4">
-                <div class="card" style="width: 18rem">
-                    <img class="card-img-top" src="img/bitter.jpg" alt="Card image cap">
+            <div class = "card-flip">
+              <div class="card border border-white" style="width: 18rem; height: 24rem;">
+                <div class = "face front">
+                  <img class="card-img-top" src="img/bitter.jpg" alt="Card image cap">
                     <div class="card-body">
-                      <h6 class="card-title">TRUE OR FALSE</h6>
-                      <p class="card-text">Is bitterness a good quality to have in olive oil? </p>
-                      <a href="#" class="btn btn-primary">See Answer</a>
+                      <p class="card-title">TRUE OR FALSE</p>
+                      <h5 class="card-text">Is bitterness a good quality to have in olive oil? </h5>
+                      <br>
+                      <footer class="click">CLICK TO SEE ANSWER</footer>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4">            
-                <div class="card" style="width: 18rem">
-                    <img class="card-img-top" src="img/color.png" alt="Card image cap">
-                    <div class="card-body">
-                      <h6 class="card-title">TRUE OR FALSE</h6>
-                      <p class="card-text">The color of olive oil is one of the best ways to tell the quality of it.</p>
-                      <a href="#" class="btn btn-primary">See Answer</a>
-                    </div>
+                <div class="face back">
+                  <p>answer</p>
                 </div>
+                </div>
+                </div>
+                <div class = "card-flip">  
+              <div class="card border border-white" style="width: 18rem; height: 24rem;">
+                <div class = "face front">                  
+                  <img class="card-img-top" src="img/color.png" alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-title">TRUE OR FALSE</p>
+                    <h5 class="card-text">The color of olive oil is one of the best ways to tell the quality of it.</h5>
+                    <br>
+                    <footer class="click">CLICK TO SEE ANSWER</footer>
+                  </div>
+                </div>
+                <div class="face back">
+                  <p>answer</p>
+                </div>
+              </div>
+              </div>
             </div>
-          </div>
         </div>
       </div>
     </section>
@@ -237,140 +255,6 @@
       </a>
     </div>
 
-    <!-- Portfolio Modals -->
-
-    <!-- Portfolio Modal 1 -->
-    <div class="portfolio-modal mfp-hide" id="portfolio-modal-1">
-      <div class="portfolio-modal-dialog bg-white">
-        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-          <i class="fa fa-3x fa-times"></i>
-        </a>
-        <div class="container text-center">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
-              <hr class="star-dark mb-5">
-              <img class="img-fluid mb-5" src="img/portfolio/cabin.png" alt="">
-              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                <i class="fa fa-close"></i>
-                Close Project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Portfolio Modal 2 -->
-    <div class="portfolio-modal mfp-hide" id="portfolio-modal-2">
-      <div class="portfolio-modal-dialog bg-white">
-        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-          <i class="fa fa-3x fa-times"></i>
-        </a>
-        <div class="container text-center">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
-              <hr class="star-dark mb-5">
-              <img class="img-fluid mb-5" src="img/portfolio/cake.png" alt="">
-              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                <i class="fa fa-close"></i>
-                Close Project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Portfolio Modal 3 -->
-    <div class="portfolio-modal mfp-hide" id="portfolio-modal-3">
-      <div class="portfolio-modal-dialog bg-white">
-        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-          <i class="fa fa-3x fa-times"></i>
-        </a>
-        <div class="container text-center">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
-              <hr class="star-dark mb-5">
-              <img class="img-fluid mb-5" src="img/portfolio/circus.png" alt="">
-              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                <i class="fa fa-close"></i>
-                Close Project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Portfolio Modal 4 -->
-    <div class="portfolio-modal mfp-hide" id="portfolio-modal-4">
-      <div class="portfolio-modal-dialog bg-white">
-        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-          <i class="fa fa-3x fa-times"></i>
-        </a>
-        <div class="container text-center">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
-              <hr class="star-dark mb-5">
-              <img class="img-fluid mb-5" src="img/portfolio/game.png" alt="">
-              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                <i class="fa fa-close"></i>
-                Close Project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Portfolio Modal 5 -->
-    <div class="portfolio-modal mfp-hide" id="portfolio-modal-5">
-      <div class="portfolio-modal-dialog bg-white">
-        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-          <i class="fa fa-3x fa-times"></i>
-        </a>
-        <div class="container text-center">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
-              <hr class="star-dark mb-5">
-              <img class="img-fluid mb-5" src="img/portfolio/safe.png" alt="">
-              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                <i class="fa fa-close"></i>
-                Close Project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Portfolio Modal 6 -->
-    <div class="portfolio-modal mfp-hide" id="portfolio-modal-6">
-      <div class="portfolio-modal-dialog bg-white">
-        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-          <i class="fa fa-3x fa-times"></i>
-        </a>
-        <div class="container text-center">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
-              <hr class="star-dark mb-5">
-              <img class="img-fluid mb-5" src="img/portfolio/submarine.png" alt="">
-              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                <i class="fa fa-close"></i>
-                Close Project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -385,6 +269,10 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/freelancer.min.js"></script>
+
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    
 
   </body>
 
