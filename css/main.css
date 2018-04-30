@@ -169,6 +169,24 @@ border-radius: 10px;
     } 
   }
 
+  #usda {
+    margin-right: 4px;
+    width: 60px;
+    float: left;
+  }
+
+  #cooc {
+    margin-right: 4px;
+    width: 60px;
+    float: left;
+  }
+
+  #naooa {
+    margin-right: 4px;
+    width: 60px;
+    float:left;
+  }
+
   @media only screen and (max-width: 770px) {
     /* #color {
         display: inline-block;
