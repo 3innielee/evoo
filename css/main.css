@@ -2,12 +2,16 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
+#logo {
+    margin-top: 35px;
+}
+
 #definition-source {
     text-align: right;
 }
 
 #knowledge {
-    height: 750px;
+    height: 700px;
 }
 
 .card-title {
