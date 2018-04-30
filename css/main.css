@@ -1,3 +1,11 @@
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+#definition-source {
+    text-align: right;
+}
+
 #knowledge {
     height: 750px;
 }
@@ -36,20 +44,14 @@ z-index: 2;
 .card-flip .card .front {
 position: absolute;
 z-index: 1;
-background: #6e8a33;
+background: rgb(233, 233, 233);
 cursor: pointer;
 border-radius: 10px;
 }
 .card-flip .card .back {
 -webkit-transform: rotatey(-180deg);
-background: red;
+background: #443742;
+color: white;
 cursor: pointer;
 border-radius: 10px;
-body {
-    font-family: 'Raleway', sans-serif;
-
-}
-
-#definition-source {
-    text-align: right;
 }
