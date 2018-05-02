@@ -110,6 +110,9 @@ body {
     font-size: 13px;
 }
 
+.card {
+    border-radius: 10px;
+}
 .card-flip {
   -webkit-perspective: 1000;
   width: 350px;
@@ -117,6 +120,12 @@ body {
   position: relative;
   margin: 50px auto;
     }
+
+.card:hover {
+    transform: rotateY(20deg);
+    box-shadow: 0 20px 20px rgba(50,50,50,.2);
+}
+
 .card-flip .card.flipped {
 -webkit-transform: rotatey(180deg);
 }
