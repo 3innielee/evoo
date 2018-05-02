@@ -1,0 +1,9 @@
+bid,brand,isus,price_2014,price_2015,sample,failnum,rate_2014,rate_2015,source
+0,California Olive Ranch,1,0,0.46,18,0,0,100,native
+1,Cobram Estate,1,0,0.42,8,0,0,100,native
+2,Lucini,1,0,0.89,18,2,0,89,native
+3,Colavita,0,0,0.61,18,10,0,44,imported
+4,Star,0,0,0.39,18,11,0,39,imported
+5,Bertolli,0,0,0.47,18,13,0,28,imported
+6,Fillippo Berio,0,0,0.47,18,15,0,17,imported
+7,Pompeian,0,0,0.39,18,17,0,6,imported
