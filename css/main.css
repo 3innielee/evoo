@@ -21,6 +21,42 @@ body {
     width: 450px;
 }
 
+#grove {
+    position: absolute;
+    top: -5px;
+    left: 50px;
+}
+
+#olives {
+    position: absolute;
+    top: 10px;
+    left: 300px;
+}
+
+#mill {
+    position: absolute;
+    top: 8px;
+    left: 520px;
+}
+
+#refinery {
+    position: absolute;
+    top: 347px;
+    left: 516px;
+}
+
+#bottler {
+    position: absolute;
+    top: 3px;
+    left: 768px;
+}
+
+#consumer {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
 #color {
     position: absolute;
     top: 30%;
