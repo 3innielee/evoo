@@ -333,3 +333,20 @@ border-radius: 10px;
         font-size: 1.7rem;
     }
 }
+
+.animation-element {
+    opacity: 0;
+    transition: transform 1s, opacity 1s;
+}
+.animation-element.left {
+    transform: translateX(-200px);
+}
+
+.animation-element.right {
+    transform: translateX(200px);
+}
+
+.animation-element.in-view {
+    transform: translateX(0px);
+    opacity: 1;
+}
