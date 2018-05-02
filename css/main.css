@@ -54,7 +54,7 @@ body {
 #consumer {
     position: absolute;
     top: -10px;
-    right: -10px;
+    left: 1014px;
 }
 
 #color {
@@ -92,11 +92,13 @@ body {
     padding: 10px;
     border-radius: 10px;
     margin-top: 10px;
-    height: 215px;
+    min-height: 222px;
+    height: auto;
 }
 
 .media-body {
     margin: 5px;
+    align-self: center;
 }
 .mr-3 {
     margin: 10px;
@@ -119,13 +121,26 @@ body {
   /* height: 200px; */
   position: relative;
   margin: 50px auto;
-    }
-
-.card:hover {
-    transform: rotateY(20deg);
-    box-shadow: 0 20px 20px rgba(50,50,50,.2);
 }
-
+.card {
+  transition: box-shadow 300ms;
+  box-shadow: 3px 3px 5px 1px gray;
+  border-radius: 10px;
+  border: none;
+}
+.card:hover {
+    box-shadow: 6px 6px 10px 1px gray;
+}
+.card.flipped {
+    box-shadow: -3px 3px 5px 1px gray;
+}
+.card.flipped:hover {
+    box-shadow: -6px 6px 10px 1px gray;
+}
+.card-img-top {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
 .card-flip .card.flipped {
 -webkit-transform: rotatey(180deg);
 }
