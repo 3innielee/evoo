@@ -23,31 +23,31 @@ body {
 
 #grove {
     position: absolute;
-    top: -5px;
+    top: -10px;
     left: 50px;
 }
 
 #olives {
     position: absolute;
-    top: 10px;
+    top: -10px;
     left: 300px;
 }
 
 #mill {
     position: absolute;
-    top: 8px;
+    top: -10px;
     left: 520px;
 }
 
 #refinery {
     position: absolute;
-    top: 347px;
+    top: 350px;
     left: 516px;
 }
 
 #bottler {
     position: absolute;
-    top: 3px;
+    top: -10px;
     left: 768px;
 }
 
