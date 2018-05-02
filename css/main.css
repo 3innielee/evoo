@@ -237,3 +237,11 @@ border-radius: 10px;
   .attrBox {
       height: 100px;
   }
+
+  #backButton {
+      text-align: left;
+  }
+
+  #sourcesBanner {
+      height: 180px;
+  }
