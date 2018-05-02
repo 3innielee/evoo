@@ -30,15 +30,15 @@ $(function(){
       .attr('y', 30)
       .attr('class', 'label')
       .attr("transform", "rotate(-90)")
-      .text('Sample Pass Rate')
-      .attr("fill","white");
+      .text('Sample Pass Rate');
+    //3.attr("fill","white");
   svg.append('text')
       .attr('x', canvasWidth-50)
       .attr('y', canvasHeight-40)
       .attr('text-anchor', 'end')
       .attr('class', 'label')
-      .text('Price (dollar per gallon)')
-      .attr("fill","white");
+      .text('Price (dollar per gallon)');
+      //.attr("fill","white");
   // title
   /*svg.append('text')
     .attr('x', 400)
@@ -121,13 +121,13 @@ $(function(){
     // Add axes (uncomment this code to add axes)
     graphArea.append('g')
       .attr('class', 'x axis')
-      .attr('stroke','white')
+      //.attr('stroke','white')
       .attr('transform', 'translate(0,' + (height) + ')')
       .call(d3.axisBottom(xScale));
 
     graphArea.append('g')
       .attr('class', 'y axis')
-      .attr('stroke','white')
+      //.attr('stroke','white')
       .call(d3.axisLeft(yScale));
 
 
