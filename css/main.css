@@ -112,6 +112,9 @@ body {
     font-size: 13px;
 }
 
+.card {
+    border-radius: 10px;
+}
 .card-flip {
   -webkit-perspective: 1000;
   width: 350px;
