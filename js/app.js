@@ -7,9 +7,9 @@ $(function(){
     bottom: 30,
     left: 90
   };
-  var canvasWidth = 450;
+  var canvasWidth = 600;
   var canvasHeight = 350;
-  var width = canvasWidth - margin.left - margin.right-50;
+  var width = canvasWidth - margin.left - margin.right-200;
   var height = canvasHeight - margin.top - margin.bottom-50;
 
   var svg = d3.select('svg')
@@ -26,15 +26,15 @@ $(function(){
 
   // axis labels
   svg.append('text')
-      .attr('x', -250)
-      .attr('y', 30)
+      .attr('x', -175)
+      .attr('y', 50)
       .attr('class', 'label')
       .attr("transform", "rotate(-90)")
       .text('Sample Pass Rate');
     //3.attr("fill","white");
   svg.append('text')
-      .attr('x', canvasWidth-50)
-      .attr('y', canvasHeight-40)
+      .attr('x', canvasWidth-200)
+      .attr('y', canvasHeight-45)
       .attr('text-anchor', 'end')
       .attr('class', 'label')
       .text('Price (dollar per gallon)');
@@ -49,6 +49,36 @@ $(function(){
     .attr('text-anchor', 'end')
     
     .text('Top U.S. and Imported Brands');*/
+  var legend = svg.selectAll(".legend")
+    .data(["Imported Brand", "CaliFornia Brand"])
+    .enter().append("g")
+    .attr("class", "legend")
+    .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+  legend.append("text")
+    .attr('x', canvasWidth)
+    .attr('y', canvasHeight-300)
+    .attr("dy", ".35em")
+    .style("text-anchor", "end")
+    .text(function(d) { return d; });
+
+  legend.append("rect")
+    .attr('x', canvasWidth-425)
+    .attr('y', canvasHeight-320)
+    .attr('height', 20)
+    .attr('width', 20)
+    .style("fill", function(d) {
+      if (d=="Imported Brand"){return '#241023';}
+        else{return '#E3D26F';}
+
+    })
+    //.attr("d", function(d, i) { return symbol.type(symbols(d))(); })
+    .attr("transform", function(d, i) { 
+        return "translate(" + (width -10) + "," + 10 + ")";
+    });
+      
+ 
+  
 
 
 
@@ -164,7 +194,7 @@ $(function(){
           div.transition()
              .duration(200)
              .style("opacity", .9);
-          div.html(d.brand+" ("+d.source+")<br/>("+d[xColumn]+","+d[yColumn]+")")
+          div.html(d.brand+"<br/>("+d[xColumn]+","+d[yColumn]+"%)")
              .style("left", (d3.event.pageX) + "px")
              .style("top", (d3.event.pageY - 28) + "px");
           })
