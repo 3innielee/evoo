@@ -83,7 +83,7 @@ $(function(){
       
  
   
-  d3.csv('data.csv', function(data) {
+  d3.csv('data/data.csv', function(data) {
     
     
     // Add code here
@@ -130,7 +130,7 @@ $(function(){
     var yColumn = 'rate_' + String(year);
     
     // Get the data again
-    d3.csv('data.csv', function(error, data) {
+    d3.csv('data/data.csv', function(error, data) {
       // Make the changes
 
       svg.selectAll("circle")
