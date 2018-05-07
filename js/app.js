@@ -30,14 +30,14 @@ $(function(){
       .attr('y', 30)
       .attr('class', 'label')
       .attr("transform", "rotate(-90)")
-      .text('Sample Pass Rate');
+      .text('Sensory Test Pass Rate (%)');
     //3.attr("fill","white");
   svg.append('text')
       .attr('x', canvasWidth-50)
       .attr('y', canvasHeight-40)
       .attr('text-anchor', 'end')
       .attr('class', 'label')
-      .text('Price (dollar per gallon)');
+      .text('Price ($ per ounce)');
       //.attr("fill","white");
   // title
   /*svg.append('text')
