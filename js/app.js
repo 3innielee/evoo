@@ -7,9 +7,9 @@ $(function(){
     bottom: 30,
     left: 90
   };
-  var canvasWidth = 450;
+  var canvasWidth = 600;
   var canvasHeight = 350;
-  var width = canvasWidth - margin.left - margin.right-50;
+  var width = canvasWidth - margin.left - margin.right-200;
   var height = canvasHeight - margin.top - margin.bottom-50;
 
   var svg = d3.select('svg')
@@ -26,15 +26,15 @@ $(function(){
 
   // axis labels
   svg.append('text')
-      .attr('x', -250)
-      .attr('y', 30)
+      .attr('x', -175)
+      .attr('y', 50)
       .attr('class', 'label')
       .attr("transform", "rotate(-90)")
       .text('Sensory Test Pass Rate (%)');
     //3.attr("fill","white");
   svg.append('text')
-      .attr('x', canvasWidth-50)
-      .attr('y', canvasHeight-40)
+      .attr('x', canvasWidth-200)
+      .attr('y', canvasHeight-45)
       .attr('text-anchor', 'end')
       .attr('class', 'label')
       .text('Price ($ per ounce)');
@@ -52,10 +52,39 @@ $(function(){
 
 
 
+      
+  
+  var legend = svg.selectAll(".legend")
+    .data(["Imported Brand", "California Brand"])
+    .enter().append("g")
+    .attr("class", "legend")
+    .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
 
-  // Step 1: edit data.csv to include the data you want to show
+  legend.append("text")
+    .attr('x', canvasWidth)
+    .attr('y', canvasHeight-300)
+    .attr("dy", ".35em")
+    .style("text-anchor", "end")
+    .text(function(d) { return d; });
+
+  legend.append("rect")
+    .attr('x', canvasWidth-425)
+    .attr('y', canvasHeight-320)
+    .attr('height', 20)
+    .attr('width', 20)
+    .style("fill", function(d) {
+      if (d=="Imported Brand"){return '#241023';}
+        else{return '#E3D26F';}
+
+    })
+    .attr("transform", function(d, i) { 
+        return "translate(" + (width -10) + "," + 10 + ")";
+    });
+      
+ 
+  
   d3.csv('data.csv', function(data) {
-    // Step 2: Create x and y scales (scaleLinear) to draw points. 
+    
     
     // Add code here
     xScale = d3.scaleLinear().domain([0, 1]).range([0, width]);
@@ -71,63 +100,17 @@ $(function(){
         if (d.source=='imported'){return '#241023';}
         else{return '#E3D26F';}
       })
-      /*svg.append("g").selectAll("dot")
-      .data(data)
-      .enter().append("image")
-      .attr("xlink:href", function(d){ return "https://github.com/3innielee/evoo/blob/master/img/fruity.svg"; })
-      .attr("r", 5)
-      .attr("x", function(d) { return xScale(d.price_2014)+margin.left; })
-      .attr("y", function(d) { return yScale(d.rate_2014)+margin.top; })
-      .style('fill', function(d){ 
-        if (d.source=='imported'){return 'red';}
-        else{return 'blue';}
-      })*/
-      /*.on("mouseover", function(d) {
-       div.transition()
-         .duration(200)
-         .style("opacity", .9);
-       div.html(d.source+"<br/>("+d.price_2014+","+d.rate_2014+")")
-         .style("left", (d3.event.pageX) + "px")
-         .style("top", (d3.event.pageY - 28) + "px");
-       })
-     .on("mouseout", function(d) {
-       div.transition()
-         .duration(500)
-         .style("opacity", 0);
-       })*/;
-
-     /*svg.selectAll("text")
-                .data(data)
-                .enter()
-                .append("text")
-                .text(function(d) {
-                  console.log(d.brand)
-                    return d.brand;
-                })
-                .attr("x", function(d) {
-                    return xScale(d.price_2014)+margin.left;  // Returns scaled location of x
-                })
-                .attr("y", function(d) {
-                    return yScale(d.rate_2014)+margin.top;  // Returns scaled circle y
-                })
-                .attr("class","dotlabel")
-                .attr("font_family", "sans-serif")  // Font type
-                .attr("font-size", "11px")  // Font size
-                .attr("fill", "darkgreen");*/   // Font color
-
-    // Step 3: Add code to color the points by category (add code here or above)
+      
 
 
     // Add axes (uncomment this code to add axes)
     graphArea.append('g')
       .attr('class', 'x axis')
-      //.attr('stroke','white')
       .attr('transform', 'translate(0,' + (height) + ')')
       .call(d3.axisBottom(xScale));
 
     graphArea.append('g')
       .attr('class', 'y axis')
-      //.attr('stroke','white')
       .call(d3.axisLeft(yScale));
 
 
@@ -146,9 +129,6 @@ $(function(){
     var xColumn = 'price_' + String(year);
     var yColumn = 'rate_' + String(year);
     
-    // Step 4: Animate changing the points shown by year here
-    //document.getElementById("status").innerHTML = "Year: "+String(year);
-
     // Get the data again
     d3.csv('data.csv', function(error, data) {
       // Make the changes
@@ -164,7 +144,7 @@ $(function(){
           div.transition()
              .duration(200)
              .style("opacity", .9);
-          div.html(d.brand+" ("+d.source+")<br/>("+d[xColumn]+","+d[yColumn]+")")
+          div.html(d.brand+"<br/>("+d[xColumn]+","+d[yColumn]+"%)")
              .style("left", (d3.event.pageX) + "px")
              .style("top", (d3.event.pageY - 28) + "px");
           })
@@ -174,18 +154,8 @@ $(function(){
          .style("opacity", 0);
        });
 
-
-      /*svg.selectAll("text").filter(".dotlabel")
-                .transition()
-        .duration(2000)
-        .delay(10)
-        .attr("x", function(d) { return xScale(d[xColumn])+margin.left; })
-        .attr("y", function(d) { return yScale(d[yColumn])+margin.top; });*/
-
     });
 
   });
-  
 
-// Step 5: make some other change to the graph
 });
